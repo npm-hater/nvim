@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 vim.keymap.set('n', '<leader>%', ':vsplit<CR><C-w>l', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>"', ':split<CR><C-w>j', { noremap = true, silent = true })
 

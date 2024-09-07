@@ -17,6 +17,9 @@ require("lazy").setup({
     config = function()
       require("supermaven-nvim").setup({
         log_level = "off",
+        keymaps = {
+          accept_word = "<C-j>",
+        },
       })
     end,
   },
@@ -25,5 +28,5 @@ require("lazy").setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 }, {})
