@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   {
     "supermaven-inc/supermaven-nvim",
-    --dir = "~/repos/temp/supermaven-nvim",
     config = function()
       require("supermaven-nvim").setup({
         log_level = "off",
