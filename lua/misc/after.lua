@@ -90,9 +90,18 @@ require('mason').setup()
 
 -- MANUALLY INSTALL THESE WITH :MasonInstall
 local servers = {
-  rust_analyzer = {
-  },
-  stylua = {
+  rust_analyzer = {},
+  gopls = {},
+  pyright = {},
+  lua_language_server = {
+    -- this doesn't fix undefined global vim warning, not sure why
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { 'vim' },
+        },
+      },
+    },
   },
 }
 require('mason-lspconfig').setup {
