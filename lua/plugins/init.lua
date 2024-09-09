@@ -29,4 +29,19 @@ require("lazy").setup({
   },
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
+    },
+  },
+  {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      { 'williamboman/mason.nvim', config = true },
+      'williamboman/mason-lspconfig.nvim',
+      'hrsh7th/cmp-nvim-lsp',
+    },
+  },
 }, {})
