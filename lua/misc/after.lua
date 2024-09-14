@@ -6,6 +6,14 @@ vim.keymap.set('n', '<leader>ps', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
 
+vim.keymap.set({ 'v', 'x' }, '<leader>fg', function()
+    vim.cmd('normal! "vy')
+    local selected_text = vim.fn.getreg('v')
+    selected_text = vim.fn.escape(selected_text, '\\[].*~')
+    selected_text = selected_text:gsub('\n', '')
+    builtin.live_grep({ default_text = selected_text })
+end, { noremap = true, silent = true })
+
 local configs = require("nvim-treesitter.configs")
 
 configs.setup({
