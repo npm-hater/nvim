@@ -102,16 +102,7 @@ local servers = {
   rust_analyzer = {},
   gopls = {},
   pyright = {},
-  lua_language_server = {
-    -- this doesn't fix undefined global vim warning, not sure why
-    settings = {
-      Lua = {
-        diagnostics = {
-          globals = { 'vim' },
-        },
-      },
-    },
-  },
+  lua_language_server = {},
 }
 require('mason-lspconfig').setup {
   handlers = {
