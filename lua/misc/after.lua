@@ -17,7 +17,7 @@ end, { noremap = true, silent = true })
 local configs = require("nvim-treesitter.configs")
 
 configs.setup({
-  ensure_installed = { "c", "lua", "javascript", "typescript", "rust" },
+  ensure_installed = { "javascript", "typescript", "rust", "python" },
   sync_install = false,
   auto_install = false,
   highlight = { enable = true },
